@@ -1,0 +1,113 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan:hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+  }
+  .container{
+    width: 300px;
+    border-radius: 15px;
+    background-color: var(--Very-dark-blue-card);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+  }
+  .card-image{
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  .view-icon{
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 98%;
+    background-color:hsla(178, 100%, 50%,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  .card-image:hover .view-icon{
+    opacity: 1;
+  }
+  .view-icon img{
+    width:50px;
+  }
+  .card-image img{
+    border-radius: 15px;
+  }
+  picture{
+    display: inline-block;
+  }
+  .details{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid var(--Very-dark-blue-line);
+    padding-bottom:10px;
+  }
+  .details div:nth-child(1){
+    color:var(--Cyan);
+  }
+  .details div:nth-child(2){
+    color:var(--Soft-blue);
+  }
+  .details picture{
+    display: inline-block;
+    width: fit-content;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  img{
+    width: 100%;
+  }
+  strong{
+    color:white;    
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  strong:hover{
+    color:var(--Cyan)
+  }
+  .avatar a{
+    color:white;
+    text-decoration: none;
+  }
+  .avatar picture{
+    width:30px;
+    height: 30px;
+    vertical-align: middle;
+    border:1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .avatar span{
+    color: var(--Soft-blue);
+
+  }
+  p{
+    font-weight: 300;
+    color:var(--Soft-blue)
+  }
+  .avatar a:hover{
+    color:var(--Cyan);
+    transition: 0.3s;
+  }
